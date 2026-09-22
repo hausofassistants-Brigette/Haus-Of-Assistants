@@ -1,4 +1,4 @@
-import { createClient as createSupabaseClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { createClient as createSupabaseClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
 
 const cfg=window.HOA_CONFIG||{};
 const ready=cfg.SUPABASE_URL && cfg.SUPABASE_PUBLISHABLE_KEY &&
