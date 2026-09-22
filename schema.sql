@@ -97,3 +97,36 @@ create policy client_files_delete on storage.objects for delete to authenticated
 
 -- After first login, set your own row to admin in Table Editor:
 -- update public.profiles set role='admin' where email='YOUR_ADMIN_EMAIL';
+
+-- Public website enquiries. Visitors may submit; only admins may read/manage them.
+create table if not exists public.enquiries (
+  id uuid primary key default gen_random_uuid(),
+  name text not null,
+  email text not null,
+  business_name text not null default '',
+  package_interest text not null default '',
+  message text not null default '',
+  status text not null default 'New' check (status in ('New','Contacted','Closed')),
+  created_at timestamptz not null default now()
+);
+create index if not exists enquiries_created_at_idx on public.enquiries(created_at desc);
+alter table public.enquiries enable row level security;
+drop policy if exists enquiries_public_insert on public.enquiries;
+drop policy if exists enquiries_admin_select on public.enquiries;
+drop policy if exists enquiries_admin_update on public.enquiries;
+drop policy if exists enquiries_admin_delete on public.enquiries;
+create policy enquiries_public_insert on public.enquiries for insert to anon, authenticated with check (true);
+create policy enquiries_admin_select on public.enquiries for select to authenticated using (public.is_admin());
+create policy enquiries_admin_update on public.enquiries for update to authenticated using (public.is_admin()) with check (public.is_admin());
+create policy enquiries_admin_delete on public.enquiries for delete to authenticated using (public.is_admin());
+
+-- Enable realtime for the portal tables. Safe to re-run.
+do $$ begin
+  alter publication supabase_realtime add table public.tasks;
+exception when duplicate_object then null; end $$;
+do $$ begin
+  alter publication supabase_realtime add table public.messages;
+exception when duplicate_object then null; end $$;
+do $$ begin
+  alter publication supabase_realtime add table public.invoices;
+exception when duplicate_object then null; end $$;
