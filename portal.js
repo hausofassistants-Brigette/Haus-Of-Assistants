@@ -149,7 +149,7 @@ async function createClientAccount(e){
   const button=document.querySelector('#client-form button[type="submit"]');
   if(button){button.disabled=true;button.textContent="Creating…";}
   try{
-    const {data,error}=await supabase.functions.invoke("create-user",{body:payload});
+    const {data,error}=await supabase.functions.invoke("Create-user",{body:payload});
     if(error){
       console.error("create-user error",error);
       let detail=error.message||"The server could not create the client.";
