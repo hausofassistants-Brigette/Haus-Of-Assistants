@@ -179,5 +179,5 @@ function subscribeRealtime(){
  .on("postgres_changes",{event:"*",schema:"public",table:"invoices"},async()=>{await loadInvoices();renderInvoices();renderOverview()})
  .subscribe();
 }
-supabase?.auth.onAuthStateChange((_event,s)=>{session=s;if(!s){location.reload()}});
+supabase?.auth.onAuthStateChange((_event,s)=>{session=s;});
 boot();
