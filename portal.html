@@ -1,102 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Haus Of Assistants | Portal</title>
-<link rel="icon" href="haus-of-assistants-logo.png">
-<link rel="stylesheet" href="portal.css">
-</head>
-<body>
-<div id="login-view" class="login-wrap">
-  <div class="login-card">
-    <a href="index.html"><img src="haus-monogram.png" class="login-logo" alt="Haus Of Assistants"></a>
-    <div class="eyebrow">Secure Portal</div>
-    <h1>Welcome back.</h1>
-    <p class="muted">One portal for Haus Of Assistants clients and admin.</p>
-    <form id="login-form">
-      <label>Email address<input id="login-email" type="email" autocomplete="username" required></label>
-      <label>Password<input id="login-password" type="password" autocomplete="current-password" required></label>
-      <button class="primary wide" type="submit">Log In</button>
-      <button class="link-btn" id="forgot-btn" type="button">Forgot password?</button>
-      <div id="login-msg" class="msg"></div>
-    </form>
-    <div class="login-help">Need help? <a href="mailto:HausOfAssistants@gmail.com">HausOfAssistants@gmail.com</a></div>
-  </div>
-</div>
-
-<div id="app-view" class="app hidden">
-  <aside class="sidebar">
-    <div class="brand"><img src="haus-monogram.png" alt="Haus Of Assistants"></div>
-    <div class="userbox"><div id="side-name">Loading…</div><small id="side-role"></small></div>
-    <nav id="nav">
-      <button data-section="overview" class="active">Overview</button>
-      <button data-section="tasks">Tasks</button>
-      <button data-section="chat">Chat</button>
-      <button data-section="files">Files</button>
-      <button data-section="invoices">Invoices</button>
-      <button data-section="clients" id="clients-nav">Clients</button>
-      <button data-section="account">Account</button>
-    </nav>
-    <button id="logout" class="logout">Log out</button>
-  </aside>
-
-  <main class="main">
-    <header class="topbar">
-      <button id="mobile-menu" class="menu-btn">☰</button>
-      <div><div class="eyebrow">Haus Of Assistants Portal</div><h2 id="page-title">Overview</h2></div>
-      <div class="top-actions"><span id="top-company" class="pill">—</span></div>
-    </header>
-
-    <div id="global-msg" class="global-msg"></div>
-
-    <section id="section-overview" class="section">
-      <div class="hero-panel"><div><div class="eyebrow">Your support, all in one place.</div><h1 id="welcome-title">Welcome</h1><p id="welcome-copy">Manage your Haus Of Assistants work here.</p></div><div class="hero-mark">HA</div></div>
-      <div class="stats" id="stats"></div>
-      <div class="two-col">
-        <div class="panel"><div class="panel-head"><h3>Recent tasks</h3><button class="text-btn" data-section-jump="tasks">View all</button></div><div id="recent-tasks" class="list"></div></div>
-        <div class="panel"><div class="panel-head"><h3>Recent messages</h3><button class="text-btn" data-section-jump="chat">Open chat</button></div><div id="recent-messages" class="list"></div></div>
-      </div>
-    </section>
-
-    <section id="section-tasks" class="section hidden">
-      <div class="section-head"><div><div class="eyebrow">Work queue</div><h1>Tasks</h1></div><button id="new-task-btn" class="primary">+ New Task</button></div>
-      <div class="filters"><input id="task-search" placeholder="Search tasks…"><select id="task-status-filter"><option value="">All statuses</option><option>Not Started</option><option>In Progress</option><option>Completed</option></select><select id="task-priority-filter"><option value="">All priorities</option><option>Urgent</option><option>High</option><option>Normal</option><option>Low</option></select></div>
-      <div class="panel"><div id="tasks-table"></div></div>
-    </section>
-
-    <section id="section-chat" class="section hidden">
-      <div class="section-head"><div><div class="eyebrow">Communication</div><h1>Chat</h1></div></div>
-      <div class="chat-panel"><div id="chat-messages" class="chat-messages"></div><form id="chat-form" class="chat-form"><textarea id="chat-input" required placeholder="Write a message…"></textarea><button class="primary" type="submit">Send</button></form></div>
-    </section>
-
-    <section id="section-files" class="section hidden">
-      <div class="section-head"><div><div class="eyebrow">Shared documents</div><h1>Files</h1></div></div>
-      <div class="panel upload-panel"><label class="drop"><input id="file-input" type="file" multiple><strong>Upload files</strong><span>Choose files to share securely with Haus Of Assistants.</span></label><div id="files-list" class="file-grid"></div></div>
-    </section>
-
-    <section id="section-invoices" class="section hidden">
-      <div class="section-head"><div><div class="eyebrow">Billing</div><h1>Invoices</h1></div><button id="new-invoice-btn" class="primary admin-only">+ New Invoice</button></div>
-      <div class="panel"><div id="invoices-table"></div></div>
-    </section>
-
-    <section id="section-clients" class="section hidden">
-      <div class="section-head"><div><div class="eyebrow">Admin</div><h1>Clients</h1></div><button id="new-client-btn" class="primary">+ Create Client</button></div>
-      <div class="panel"><div id="clients-table"></div></div>
-    </section>
-
-    <section id="section-account" class="section hidden">
-      <div class="section-head"><div><div class="eyebrow">Your details</div><h1>Account</h1></div></div>
-      <div class="two-col">
-        <form id="profile-form" class="panel form-panel"><h3>Profile</h3><label>Full name<input id="profile-name" required></label><label>Business name<input id="profile-business"></label><label>Phone<input id="profile-phone"></label><button class="primary" type="submit">Save details</button></form>
-        <form id="password-form" class="panel form-panel"><h3>Change password</h3><label>New password<input id="new-password" type="password" minlength="8" required></label><label>Confirm password<input id="confirm-password" type="password" minlength="8" required></label><button class="primary" type="submit">Update password</button><div class="muted small">Use at least 8 characters.</div></form>
-      </div>
-    </section>
-  </main>
-</div>
-
-<div id="modal" class="modal hidden"><div class="modal-card"><button id="modal-close" class="modal-close">×</button><div id="modal-body"></div></div></div>
-
-<script src="config.js"></script>
-<script type="module" src="portal.js"></script>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Haus Of Assistants | Portal</title><link rel="icon" href="haus-of-assistants-logo.png"><link rel="stylesheet" href="portal.css"></head><body>
+<div id="login-view" class="login-wrap"><div class="login-card"><div class="login-brand"><a href="index.html"><img src="haus-of-assistants-logo.png" class="login-logo" alt="Haus Of Assistants"></a></div><div class="eyebrow">Secure client portal</div><h1>Welcome back.</h1><p class="muted">Tasks, chat, files, invoices and time tracking in one calm workspace.</p><form id="login-form"><label>Email address<input id="login-email" type="email" autocomplete="username" required></label><label>Password<input id="login-password" type="password" autocomplete="current-password" required></label><button class="primary wide" type="submit">Log In</button><button class="link-btn" id="forgot-btn" type="button">Forgot password?</button><div id="login-msg" class="msg"></div></form></div></div>
+<div id="app-view" class="app hidden"><aside class="sidebar"><button id="sidebar-toggle" class="sidebar-toggle" aria-label="Collapse sidebar">‹</button><div class="brand"><div class="brand-tile"><img src="haus-of-assistants-logo.png" alt="Haus Of Assistants"></div></div><div class="userbox"><div id="side-name">Loading…</div><small id="side-role"></small></div><nav id="nav"><button data-section="overview"><span class="nav-icon">⌂</span><span class="nav-label">Overview</span></button><button data-section="tasks"><span class="nav-icon">✓</span><span class="nav-label">Tasks</span></button><button data-section="chat"><span class="nav-icon">◌</span><span class="nav-label">Chat</span></button><button data-section="files"><span class="nav-icon">□</span><span class="nav-label">Files</span></button><button data-section="invoices"><span class="nav-icon">$</span><span class="nav-label">Invoices</span></button><button data-section="time"><span class="nav-icon">◷</span><span class="nav-label">Time Tracking</span></button><button data-section="clients" id="clients-nav"><span class="nav-icon">◎</span><span class="nav-label">Clients</span></button><button data-section="account"><span class="nav-icon">○</span><span class="nav-label">Account</span></button></nav><button id="logout" class="logout"><span class="nav-label">Log out</span><span class="nav-icon">↗</span></button></aside>
+<main class="main"><header class="topbar"><button id="mobile-menu" class="menu-btn">☰</button><div><div class="eyebrow">Haus Of Assistants Portal</div><h2 id="page-title">Overview</h2></div><span id="top-company" class="pill">—</span></header><div id="global-msg" class="global-msg"></div>
+<section id="section-overview" class="section"><div class="hero-panel"><div><div class="eyebrow light">Your support, all in one place</div><h1 id="welcome-title">Welcome</h1><p id="welcome-copy"></p></div><div class="hero-art"><img id="portal-hero-image" src="workspace-2.png" alt="Haus Of Assistants workspace"></div></div><div class="stats" id="stats"></div><div class="two-col"><div class="panel"><div class="panel-head"><h3>Recent tasks</h3><button class="text-btn" data-section-jump="tasks">View all</button></div><div id="recent-tasks" class="list"></div></div><div class="panel"><div class="panel-head"><h3>Recent messages</h3><button class="text-btn" data-section-jump="chat">Open chat</button></div><div id="recent-messages" class="list"></div></div></div></section>
+<section id="section-tasks" class="section hidden"><div class="section-head"><div><div class="eyebrow">Work queue</div><h1>Tasks</h1></div><button id="new-task-btn" class="primary">+ New Task</button></div><div class="filters"><input id="task-search" placeholder="Search tasks…"><select id="task-status-filter"><option value="">All statuses</option><option>Not Started</option><option>In Progress</option><option>Completed</option></select><select id="task-priority-filter"><option value="">All priorities</option><option>Urgent</option><option>High</option><option>Normal</option><option>Low</option></select></div><div id="tasks-content"></div></section>
+<section id="section-chat" class="section hidden"><div class="section-head"><div><div class="eyebrow">Communication</div><h1>Chat</h1></div></div><div class="filters"><input id="chat-search" placeholder="Search messages…"></div><div id="chat-content"></div></section>
+<section id="section-files" class="section hidden"><div class="section-head"><div><div class="eyebrow">Shared documents</div><h1>Files</h1></div></div><div class="filters"><input id="file-search" placeholder="Search files…"></div><div id="files-content"></div></section>
+<section id="section-invoices" class="section hidden"><div class="section-head"><div><div class="eyebrow">Billing</div><h1>Invoices</h1></div><button id="new-invoice-btn" class="primary admin-only">+ Upload Invoice</button></div><div class="filters"><input id="invoice-search" placeholder="Search invoices…"></div><div id="invoices-content"></div></section>
+<section id="section-time" class="section hidden"><div class="section-head"><div><div class="eyebrow">Weekly hours</div><h1>Time Tracking</h1></div><button id="new-time-btn" class="primary admin-only">+ Add Time Log</button></div><div id="time-content"></div></section>
+<section id="section-clients" class="section hidden"><div class="section-head"><div><div class="eyebrow">Admin</div><h1>Clients</h1></div><button id="new-client-btn" class="primary">+ Create Client</button></div><div id="clients-content"></div></section>
+<section id="section-account" class="section hidden"><div class="section-head"><div><div class="eyebrow">Your details</div><h1>Account</h1></div></div><div class="two-col"><form id="profile-form" class="panel form-panel"><h3>Profile</h3><label>Full name<input id="profile-name" required></label><label>Business name<input id="profile-business"></label><label>Phone<input id="profile-phone"></label><button class="primary" type="submit">Save details</button></form><form id="password-form" class="panel form-panel"><h3>Change password</h3><label>New password<input id="new-password" type="password" minlength="8" required></label><label>Confirm password<input id="confirm-password" type="password" minlength="8" required></label><button class="primary" type="submit">Update password</button></form></div></section>
+</main></div><div id="modal" class="modal hidden"><div class="modal-card"><button id="modal-close" class="modal-close">×</button><div id="modal-body"></div></div></div><script src="config.js"></script><script type="module" src="portal.js"></script></body></html>
