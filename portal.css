@@ -44,3 +44,12 @@ body{background:#fbfaf8}.app{background:#fbfaf8}.sidebar{width:205px;background:
 /* Dashboard containment corrections */
 .dashboard-grid{align-items:start}.dashboard-main{min-width:0}.founder-card{min-width:0;max-height:690px}.founder-card img{height:335px}.founder-card blockquote{font-size:20px}.dashboard-panels{align-items:stretch}.dashboard-panels>.panel{overflow:hidden}.activity-row div,.client-dash div,.dash-task div{min-width:0}.activity-row small,.dash-task small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.time-ring{flex:0 0 120px}
 @media(min-width:1151px){.dashboard-grid{grid-template-columns:minmax(0,1fr) 230px}.founder-card{grid-column:2;grid-row:1}.dashboard-main{grid-column:1;grid-row:1}}
+
+/* Collapsed sidebar polish */
+.app.sidebar-collapsed .sidebar{width:78px;padding-left:9px;padding-right:9px}
+.app.sidebar-collapsed .brand{margin:0 -9px 4px;padding:9px 5px 12px;display:grid;place-items:center}
+.app.sidebar-collapsed .brand-tile{width:60px;height:68px;display:grid;place-items:center;overflow:visible}
+.app.sidebar-collapsed .brand img{width:58px!important;height:58px!important;object-fit:contain}
+.app.sidebar-collapsed .sidebar nav{width:100%}
+.app.sidebar-collapsed .sidebar nav button,.app.sidebar-collapsed .logout{width:100%;padding-left:0;padding-right:0}
+.app.sidebar-collapsed .nav-icon{width:100%;text-align:center}
