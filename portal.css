@@ -18,3 +18,6 @@ body{background:var(--beige2);color:#22201e}.login-card,.panel,.client-section,.
 
 /* Full-width chat messages */
 .chat-messages{align-items:stretch}.bubble{width:100%;max-width:none!important;box-sizing:border-box;margin-left:0!important;margin-right:0!important}.bubble.mine{align-self:stretch}.bubble.theirs{align-self:stretch}
+
+/* Chat sender distinction */
+.bubble{width:calc(100% - 34px)!important;max-width:none!important}.bubble.mine{align-self:flex-end!important;margin-left:34px!important;margin-right:0!important}.bubble.theirs{align-self:flex-start!important;margin-left:0!important;margin-right:34px!important}
