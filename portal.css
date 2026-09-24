@@ -59,3 +59,10 @@ body{background:#fbfaf8}.app{background:#fbfaf8}.sidebar{width:205px;background:
 
 /* Corrected PDF preview sizing */
 #modal.preview-mode{padding:14px}#modal.preview-mode .modal-card{width:min(1100px,94vw);height:min(900px,94vh);max-height:94vh;overflow:hidden;display:flex;flex-direction:column;padding:24px}.preview-head{flex:0 0 auto}.portal-preview{width:100%!important;max-width:100%;height:auto!important;flex:1 1 auto;min-height:0;overflow:hidden;align-items:stretch;justify-content:stretch}.portal-preview-frame{display:block;width:100%;height:100%;min-height:0}.portal-preview-image{margin:auto;max-width:100%;max-height:none}.portal-preview-text{height:100%}@media(max-width:700px){#modal.preview-mode .modal-card{width:96vw;height:94vh;padding:18px}.portal-preview{width:100%!important;height:auto!important}}
+
+/* PDF preview viewport correction: keep full modal height and scroll inside the PDF viewer */
+#modal.preview-mode .modal-card{height:94vh;max-height:94vh}
+#modal.preview-mode #modal-body{display:flex;flex-direction:column;flex:1 1 auto;min-height:0;overflow:hidden}
+#modal.preview-mode .portal-preview{display:block;flex:1 1 auto;min-height:0;height:100%!important;overflow:hidden}
+#modal.preview-mode .portal-preview-frame{display:block;width:100%;height:100%!important;min-height:600px;border:0}
+@media(max-height:760px){#modal.preview-mode .portal-preview-frame{min-height:480px}}
