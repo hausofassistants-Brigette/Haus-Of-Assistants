@@ -40,3 +40,7 @@ body{background:#fbfaf8}.app{background:#fbfaf8}.sidebar{width:205px;background:
 @media(max-width:1150px){.dashboard-grid{grid-template-columns:1fr}.founder-card{display:none}.stats{grid-template-columns:repeat(3,1fr)}.hero-panel{height:auto}.portal-search{display:none}}
 @media(max-width:900px){.sidebar{width:260px}.main{margin-left:0;width:100%}.dashboard-panels{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.hero-panel{grid-template-columns:1fr}.hero-art{display:none}.top-actions .pill{display:none}}
 @media(max-width:560px){.stats{grid-template-columns:1fr}.hero-copy{padding:22px!important}.hero-panel h1{font-size:29px}}
+
+/* Dashboard containment corrections */
+.dashboard-grid{align-items:start}.dashboard-main{min-width:0}.founder-card{min-width:0;max-height:690px}.founder-card img{height:335px}.founder-card blockquote{font-size:20px}.dashboard-panels{align-items:stretch}.dashboard-panels>.panel{overflow:hidden}.activity-row div,.client-dash div,.dash-task div{min-width:0}.activity-row small,.dash-task small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.time-ring{flex:0 0 120px}
+@media(min-width:1151px){.dashboard-grid{grid-template-columns:minmax(0,1fr) 230px}.founder-card{grid-column:2;grid-row:1}.dashboard-main{grid-column:1;grid-row:1}}
