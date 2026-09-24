@@ -27,3 +27,6 @@ body{background:var(--beige2);color:#22201e}.login-card,.panel,.client-section,.
 
 /* Preview close control */
 .preview-x{border:0;background:transparent;font-size:28px;line-height:1;cursor:pointer;padding:2px 6px;color:inherit;border-radius:8px}.preview-x:hover{background:rgba(0,0,0,.06)}
+
+/* Previews use their own single X close control */
+#modal.preview-mode #modal-close{display:none!important}
