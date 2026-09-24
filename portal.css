@@ -30,3 +30,6 @@ body{background:var(--beige2);color:#22201e}.login-card,.panel,.client-section,.
 
 /* Previews use their own single X close control */
 #modal.preview-mode #modal-close{display:none!important}
+
+/* Profile identity shown beside portal activity */
+.identity-badge{display:inline-flex;align-items:center;gap:6px;vertical-align:middle;font-size:12px;font-weight:600}.identity-badge img{width:24px;height:24px;border-radius:50%;object-fit:cover;border:1px solid rgba(0,0,0,.1);background:#f2eee8}.message-sender{margin-bottom:8px}.message-sender .identity-badge img{width:30px;height:30px}.item-owner{display:flex;align-items:center;gap:5px;margin-top:7px;font-size:11px;color:var(--muted)}.item-owner .identity-badge{font-size:11px}.item-owner .identity-badge img{width:20px;height:20px}
