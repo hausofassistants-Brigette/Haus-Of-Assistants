@@ -12,3 +12,6 @@ body{background:var(--beige2);color:#22201e}.login-card,.panel,.client-section,.
 
 /* Preview feedback refinements */
 #recent-tasks,#recent-messages{display:grid;gap:14px;margin-top:16px}#recent-tasks .list-item,#recent-messages .list-item{padding:18px 16px;line-height:1.45;align-items:flex-start}#recent-tasks .list-item strong,#recent-messages .list-item strong{display:block;margin-bottom:6px;line-height:1.3}#recent-tasks .small,#recent-messages .small{line-height:1.45}.two-col{gap:22px}.panel-head{margin-bottom:8px}#hoa-notify-wrap{right:22px!important;top:86px!important} @media(max-width:900px){#hoa-notify-wrap{right:14px!important;top:78px!important}}
+
+/* Header notification + profile avatars */
+#hoa-notify-wrap{position:fixed!important;right:190px!important;top:17px!important}#hoa-notify-btn{background:var(--paper)!important}.profile-avatar{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid #555;margin-bottom:10px}.avatar-upload{display:flex;align-items:center;gap:18px;padding:14px;background:var(--beige2);border-radius:14px}.account-avatar{width:88px;height:88px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}.avatar-upload input{margin-top:7px}@media(max-width:900px){#hoa-notify-wrap{right:72px!important;top:16px!important}}
