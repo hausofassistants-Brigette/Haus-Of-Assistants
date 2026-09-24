@@ -15,3 +15,6 @@ body{background:var(--beige2);color:#22201e}.login-card,.panel,.client-section,.
 
 /* Header notification + profile avatars */
 #hoa-notify-wrap{position:fixed!important;right:190px!important;top:17px!important}#hoa-notify-btn{background:var(--paper)!important}.profile-avatar{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid #555;margin-bottom:10px}.avatar-upload{display:flex;align-items:center;gap:18px;padding:14px;background:var(--beige2);border-radius:14px}.account-avatar{width:88px;height:88px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}.avatar-upload input{margin-top:7px}@media(max-width:900px){#hoa-notify-wrap{right:72px!important;top:16px!important}}
+
+/* Full-width chat messages */
+.chat-messages{align-items:stretch}.bubble{width:100%;max-width:none!important;box-sizing:border-box;margin-left:0!important;margin-right:0!important}.bubble.mine{align-self:stretch}.bubble.theirs{align-self:stretch}
