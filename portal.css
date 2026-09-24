@@ -66,3 +66,40 @@ body{background:#fbfaf8}.app{background:#fbfaf8}.sidebar{width:205px;background:
 #modal.preview-mode .portal-preview{display:block;flex:1 1 auto;min-height:0;height:100%!important;overflow:hidden}
 #modal.preview-mode .portal-preview-frame{display:block;width:100%;height:100%!important;min-height:600px;border:0}
 @media(max-height:760px){#modal.preview-mode .portal-preview-frame{min-height:480px}}
+
+/* PDF preview final viewport override */
+#modal.preview-mode .modal-card{
+  width:min(1180px,96vw);
+  height:94vh;
+  max-height:94vh;
+  box-sizing:border-box;
+}
+#modal.preview-mode #modal-body{
+  width:100%;
+  height:100%;
+  min-height:0;
+  box-sizing:border-box;
+}
+#modal.preview-mode .preview-head{
+  height:auto;
+  flex:0 0 auto;
+}
+#modal.preview-mode .portal-preview{
+  width:100%!important;
+  height:calc(94vh - 145px)!important;
+  min-height:0!important;
+  max-height:none!important;
+  flex:none!important;
+  overflow:hidden!important;
+  box-sizing:border-box;
+}
+#modal.preview-mode .portal-preview-frame{
+  width:100%!important;
+  height:100%!important;
+  min-height:0!important;
+  max-height:none!important;
+  display:block;
+}
+@media(max-width:700px){
+  #modal.preview-mode .portal-preview{height:calc(94vh - 130px)!important}
+}
