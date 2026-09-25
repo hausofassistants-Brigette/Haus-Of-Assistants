@@ -3,6 +3,7 @@ import { jsPDF } from "https://cdn.jsdelivr.net/npm/jspdf@2.5.2/+esm";
 const cfg=window.HOA_CONFIG||{};const ready=cfg.SUPABASE_URL&&cfg.SUPABASE_PUBLISHABLE_KEY&&!cfg.SUPABASE_URL.includes("YOUR_PROJECT")&&!cfg.SUPABASE_PUBLISHABLE_KEY.includes("YOUR_SB_");
 const supabase=ready?createSupabaseClient(cfg.SUPABASE_URL,cfg.SUPABASE_PUBLISHABLE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}}):null;
 let session=null,me=null,role=null,currentSection="overview",tasks=[],messages=[],files=[],invoices=[],clients=[],timeLogs=[],timeReports=[],channel=null,activeChatClient=null,portalIdentities=new Map(),vaultCredentials=[],activeVaultClient=null;
+document.documentElement.dataset.portalJs="loaded";
 const $=id=>document.getElementById(id),esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
 const fmtDate=d=>d?new Date(d+(/T/.test(d)?"":"T00:00:00")).toLocaleDateString("en-AU",{day:"2-digit",month:"short",year:"numeric"}):"—";const fmtMoney=n=>new Intl.NumberFormat("en-AU",{style:"currency",currency:"AUD"}).format(Number(n||0));
 const clientById=id=>clients.find(c=>c.client_id===id)||null;const clientLabel=id=>{const c=clientById(id);return c?`${c.full_name}${c.company_name?" · "+c.company_name:""}`:"Client"};
