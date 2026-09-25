@@ -107,3 +107,67 @@ body{background:#fbfaf8}.app{background:#fbfaf8}.sidebar{width:205px;background:
 
 /* Recurring task visibility and scrollable image previews */
 .recurring-summary{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:7px;font-size:11px;color:var(--muted)}.recurring-pill{display:inline-flex;align-items:center;padding:3px 7px;border-radius:999px;background:var(--beige2);border:1px solid var(--line);color:var(--ink);font-weight:700}.portal-preview:has(.portal-preview-image-scroll){display:block;overflow:hidden}.portal-preview-image-scroll{width:100%;height:100%;overflow:auto;text-align:left}.portal-preview-image{display:block;max-width:none;max-height:none;width:auto;height:auto;object-fit:initial}
+
+
+/* Viewport-fit chat and phone layout review */
+#section-chat{height:calc(100dvh - 78px);max-height:calc(100dvh - 78px);display:flex;flex-direction:column;overflow:hidden}
+#section-chat.hidden{display:none}
+#section-chat .section-head{flex:0 0 auto;margin-bottom:10px}
+#section-chat .filters{flex:0 0 auto;margin-bottom:10px}
+#chat-content{flex:1;min-height:0;overflow:hidden}
+#section-chat .chat-layout{height:100%;min-height:0}
+#section-chat .client-list{height:100%;max-height:none;min-height:0;overflow:auto}
+#section-chat .chat-panel{height:100%;min-height:0;overflow:hidden}
+#section-chat .chat-messages{min-height:0;max-height:none;overflow-y:auto;overscroll-behavior:contain}
+#section-chat .chat-form{flex:0 0 auto;background:#fff}
+#section-chat .chat-form textarea{min-width:0;max-height:110px}
+
+@media(max-width:900px){
+  html,body{max-width:100%;overflow-x:hidden}
+  .app,.main,.section,.topbar{max-width:100%;box-sizing:border-box}
+  .topbar{width:100%;gap:10px}
+  .top-title{min-width:0}
+  .top-title h2,.top-title span{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .section{width:100%;overflow-x:hidden}
+  .section-head{gap:12px;flex-wrap:wrap}
+  .filters{width:100%;box-sizing:border-box}
+  .filters input,.filters select{width:100%;max-width:100%;min-width:0;box-sizing:border-box}
+  .table-wrap{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .panel,.client-section,.file-card,.chat-panel,.client-list{max-width:100%;box-sizing:border-box}
+  #section-chat{height:calc(100dvh - 76px);max-height:calc(100dvh - 76px);padding:16px 14px}
+  #section-chat .section-head{margin-bottom:8px}
+  #section-chat .filters{margin-bottom:8px}
+  #section-chat .chat-layout{display:flex;flex-direction:column;gap:8px}
+  #section-chat .client-list{height:auto;max-height:96px;flex:0 0 auto;padding:6px;display:flex;overflow-x:auto;overflow-y:hidden}
+  #section-chat .client-select{min-width:160px;border-bottom:0;border-right:1px solid #eee}
+  #section-chat .chat-panel{flex:1;height:auto;min-height:0}
+  #section-chat .chat-header{padding:10px 12px}
+  #section-chat .chat-messages{padding:12px;gap:9px}
+  #section-chat .chat-form{padding:9px;gap:8px;align-items:flex-end}
+  #section-chat .chat-form textarea{min-height:42px;height:42px;resize:none}
+  #section-chat .chat-form .primary{padding:10px 14px;white-space:nowrap}
+  .modal{padding:10px}
+  .modal-card{width:min(100%,96vw);max-width:96vw;padding:20px;box-sizing:border-box}
+  .portal-preview{width:100%;max-width:100%;height:68dvh}
+}
+@media(max-width:560px){
+  .topbar{padding:11px 12px;min-height:68px}
+  .section{padding:18px 12px}
+  .section-head h1{font-size:32px}
+  .primary{max-width:100%}
+  .file-grid{width:100%}
+  .file-card{min-width:0}
+  .table-actions{max-width:100%}
+  #section-chat{height:calc(100dvh - 68px);max-height:calc(100dvh - 68px);padding:10px}
+  #section-chat .section-head h1{font-size:28px}
+  #section-chat .section-head .eyebrow{display:none}
+  #section-chat .chat-header{padding:8px 10px}
+  #section-chat .chat-messages{padding:10px}
+  #section-chat .bubble{width:calc(100% - 22px)!important;margin-left:0!important;margin-right:0!important;box-sizing:border-box}
+  #section-chat .bubble.mine{margin-left:22px!important}
+  #section-chat .bubble.theirs{margin-right:22px!important}
+  #section-chat .chat-form{position:relative;bottom:auto}
+  #section-chat .chat-form textarea{font-size:16px}
+  .portal-preview{height:65dvh;border-radius:10px}
+  .portal-preview-image-scroll{-webkit-overflow-scrolling:touch}
+}
