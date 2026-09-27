@@ -1,0 +1,19 @@
+{
+  "name": "Haus Of Assistants",
+  "short_name": "Haus Assistants",
+  "description": "Haus Of Assistants client portal",
+  "start_url": "/portal.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/haus-monogram.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
