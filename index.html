@@ -7,6 +7,14 @@
 
 /* v2 editorial visual refresh inspired by the supplied clean portfolio references */
 .hero{position:relative;overflow:hidden;background:#f1ece5;color:var(--ink);padding:90px 0}.hero:after{content:"";position:absolute;right:0;top:0;width:38%;height:100%;background:url("workspace-2.png") center/cover no-repeat;opacity:.92}.hero .container{position:relative;z-index:2}.hero h1{max-width:720px}.hero p{color:#5f5a54;max-width:620px}.hero .btn.dark{background:var(--ink);color:#fff;border-color:var(--ink)}.editorial-band{padding:0;background:#fff}.editorial-grid{display:grid;grid-template-columns:1.2fr .8fr;min-height:560px}.editorial-image img{width:100%;height:100%;object-fit:cover}.editorial-copy{padding:70px;display:flex;flex-direction:column;justify-content:center;background:#f5f0e9}.editorial-copy h2{max-width:520px}.services .card,.packages .card,.whyitem{border-radius:0;box-shadow:0 10px 35px rgba(30,25,20,.035)}.image-grid{grid-template-columns:1fr 1fr 1fr}.image-slot{padding:0;overflow:hidden}.image-slot img{width:100%;height:100%;object-fit:cover}.social-card{padding:30px}.workspace-mosaic{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:35px}.workspace-mosaic img{width:100%;height:360px;object-fit:cover}.workspace-mosaic img:first-child{grid-row:span 2;height:738px}.portfolio-note{background:#fff;padding:28px;border:1px solid var(--line);align-self:end}.intro{background:#fff}.services{background:#f7f3ed}.why{background:#eee6dc}.contact{background:#171717}@media(max-width:900px){.hero:after{position:relative;display:block;width:100%;height:280px;margin-top:50px}.hero{padding-bottom:0}.editorial-grid,.workspace-mosaic{grid-template-columns:1fr}.editorial-copy{padding:45px 7%}.workspace-mosaic img,.workspace-mosaic img:first-child{height:320px;grid-row:auto}.image-grid{grid-template-columns:1fr}}
+
+/* Hover interaction test */
+@media (hover:hover) and (pointer:fine){
+.services .card,.packages .card,.whyitem,.step,.tag,.portfolio-note{transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease;will-change:transform}
+.services .card:hover,.packages .card:hover,.whyitem:hover,.step:hover,.tag:hover,.portfolio-note:hover{transform:translateY(-7px) scale(1.018);box-shadow:0 18px 42px rgba(30,25,20,.13);border-color:#cfc5b8;position:relative;z-index:2}
+.packages .card.featured:hover{box-shadow:0 20px 46px rgba(0,0,0,.22)}
+}
+@media (prefers-reduced-motion:reduce){.services .card,.packages .card,.whyitem,.step,.tag,.portfolio-note{transition:none!important}}
 </style><style>
 footer .footerlinks a{text-decoration:none!important}
 footer .footerlinks a:hover{text-decoration:none!important}
