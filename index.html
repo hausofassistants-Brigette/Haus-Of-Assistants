@@ -21,6 +21,16 @@
   .packages .card.featured{transform:scale(1.055);z-index:1;box-shadow:0 16px 40px rgba(30,25,20,.14)}
   .packages .card.featured:hover{transform:translateY(-7px) scale(1.075)}
 }
+
+/* Stronger featured pricing treatment */
+@media (min-width:901px){
+  .packages .grid{align-items:center;padding:24px 0}
+  .packages .card.featured{transform:scale(1.11);z-index:3;box-shadow:0 24px 58px rgba(23,23,23,.24);border:2px solid #171717;min-height:365px;padding:32px}
+  .packages .card.featured .popular{font-size:11px;padding:8px 12px;letter-spacing:.14em;background:#e9e1d5}
+  .packages .card.featured h3{font-size:22px}
+  .packages .card.featured .price{font-size:31px}
+  .packages .card.featured:hover{transform:translateY(-10px) scale(1.135);box-shadow:0 30px 68px rgba(23,23,23,.30)}
+}
 </style><style>
 footer .footerlinks a{text-decoration:none!important}
 footer .footerlinks a:hover{text-decoration:none!important}
