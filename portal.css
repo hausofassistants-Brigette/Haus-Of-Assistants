@@ -233,3 +233,21 @@ body{background:#fbfaf8}.app{background:#fbfaf8}.sidebar{width:205px;background:
   .stats{grid-template-columns:1fr}
   .top-title span{display:none}
 }
+
+/* Website-matched portal visual test - 6 Oct 2026 */
+:root{--ink:#171717;--paper:#fff;--beige:#e9e1d5;--beige2:#f5f0e9;--line:#e4ddd4;--muted:#6f6962;--soft:#faf7f2}
+body{background:#f7f3ed;color:var(--ink)}
+.login-wrap{background:linear-gradient(rgba(247,243,237,.90),rgba(247,243,237,.90)),url("ChatGPT%20Image%20Sep%2024,%202026%20at%2005_59_21%20PM.png") center/cover no-repeat}
+.login-card{border-radius:0;box-shadow:0 22px 60px rgba(30,25,20,.10);border:1px solid #ded5ca}
+.login-brand{border-radius:0;background:#f0e8de}
+.login-card h1,.hero-panel h1,.founder-card blockquote{font-family:Inter,Arial,Helvetica,sans-serif;font-weight:800;letter-spacing:-.035em}
+.sidebar{background:#fff;color:var(--ink);border-right:1px solid var(--line)}
+.brand{background:#fff;border-bottom:1px solid var(--line)}.brand-tile{background:#fff!important}.userbox{border-bottom:1px solid var(--line)}.userbox small{color:#777}
+.sidebar nav button,.logout{color:#34312e;border-radius:0}.sidebar nav button:hover,.sidebar nav button.active{background:var(--beige);color:#111}.logout{border-color:var(--line)}
+.topbar{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.topbar h2{font-family:Inter,Arial,sans-serif;font-weight:800;letter-spacing:-.025em}.pill{background:var(--beige)}
+.section{background:#f7f3ed}.hero-panel{background:#eee6dc;color:var(--ink);border-radius:0;box-shadow:none}.hero-panel p{color:#625d57}.hero-art img{filter:none}.hero-art:after{background:linear-gradient(90deg,#eee6dc 0%,rgba(238,230,220,.35) 42%,transparent)}
+.panel,.stat,.client-section,.chat-panel,.client-list,.founder-card,.file-card,.vault-card{border-radius:0!important;box-shadow:0 10px 30px rgba(30,25,20,.035);border-color:var(--line)}
+.primary{transition:transform .22s ease,box-shadow .22s ease}.primary:hover{opacity:1;transform:translateY(-3px);box-shadow:0 12px 26px rgba(23,23,23,.16)}
+.mini,.dashboard-button,.drop,input,select,textarea{border-radius:0!important}.time-box,.notice,.support-card{border-radius:0!important}
+.founder-card img{filter:none}.founder-card blockquote{font-size:19px;line-height:1.2}.eyebrow{color:#746d65}
+@media(hover:hover) and (pointer:fine){.panel,.stat,.client-section,.file-card,.vault-card{transition:transform .22s ease,box-shadow .22s ease}.panel:hover,.stat:hover,.file-card:hover,.vault-card:hover{transform:translateY(-4px);box-shadow:0 15px 34px rgba(30,25,20,.08)}}
