@@ -259,3 +259,10 @@ body,.app{background:#f7f3ed;position:relative}
 .topbar{position:sticky}.panel,.stat,.client-section,.chat-panel,.client-list,.founder-card,.file-card,.vault-card,.hero-panel,.time-box,.notice,.support-card,.report-list,.report-list-title,.client-heading,.archive-panel,.login-card,.login-brand,.brand-tile,.primary,.mini,.dashboard-button,.drop,.pill,input,select,textarea{border-radius:0!important}
 .client-section,.panel,.file-card,.vault-card{overflow:hidden}
 @media(max-width:900px){.app:before{inset:0}}
+
+/* Fix test portal content/background clipping */
+html,body{min-height:100%;height:auto!important;overflow-x:hidden;overflow-y:auto!important}
+.app{min-height:100vh;height:auto!important;overflow:visible!important}
+.main{min-height:100vh;height:auto!important;overflow:visible!important;padding-bottom:56px}
+.content,.page,.page-content,.dashboard,.portal-content{height:auto!important;max-height:none!important;overflow:visible!important}
+.app:before{bottom:0;min-height:100vh}
