@@ -251,3 +251,11 @@ body{background:#f7f3ed;color:var(--ink)}
 .mini,.dashboard-button,.drop,input,select,textarea{border-radius:0!important}.time-box,.notice,.support-card{border-radius:0!important}
 .founder-card img{filter:none}.founder-card blockquote{font-size:19px;line-height:1.2}.eyebrow{color:#746d65}
 @media(hover:hover) and (pointer:fine){.panel,.stat,.client-section,.file-card,.vault-card{transition:transform .22s ease,box-shadow .22s ease}.panel:hover,.stat:hover,.file-card:hover,.vault-card:hover{transform:translateY(-4px);box-shadow:0 15px 34px rgba(30,25,20,.08)}}
+
+/* Soft imagery + consistent edge treatment test */
+body,.app{background:#f7f3ed;position:relative}
+.app:before{content:"";position:fixed;inset:0 0 0 205px;pointer-events:none;z-index:0;background:linear-gradient(rgba(247,243,237,.90),rgba(247,243,237,.90)),url("ChatGPT%20Image%20Sep%2024,%202026%20at%2005_59_21%20PM.png") center/cover fixed no-repeat;opacity:.52}
+.main{position:relative;z-index:1;background:transparent}.section{background:rgba(247,243,237,.80)}
+.topbar{position:sticky}.panel,.stat,.client-section,.chat-panel,.client-list,.founder-card,.file-card,.vault-card,.hero-panel,.time-box,.notice,.support-card,.report-list,.report-list-title,.client-heading,.archive-panel,.login-card,.login-brand,.brand-tile,.primary,.mini,.dashboard-button,.drop,.pill,input,select,textarea{border-radius:0!important}
+.client-section,.panel,.file-card,.vault-card{overflow:hidden}
+@media(max-width:900px){.app:before{inset:0}}
