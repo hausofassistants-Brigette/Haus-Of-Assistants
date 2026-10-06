@@ -266,3 +266,13 @@ html,body{min-height:100%;height:auto!important;overflow-x:hidden;overflow-y:aut
 .main{min-height:100vh;height:auto!important;overflow:visible!important;padding-bottom:56px}
 .content,.page,.page-content,.dashboard,.portal-content{height:auto!important;max-height:none!important;overflow:visible!important}
 .app:before{bottom:0;min-height:100vh}
+
+/* Keep muted imagery behind the portal content area, not clipped at content edges */
+.app:before{display:none!important}
+.main{position:relative;isolation:isolate;background:#f7f3ed}
+.main:before{content:"";position:absolute;inset:0;z-index:-2;background:url("ChatGPT%20Image%20Sep%2024,%202026%20at%2005_59_21%20PM.png") center/cover fixed no-repeat}
+.main:after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(247,243,237,.72);pointer-events:none}
+.topbar{background:rgba(255,255,255,.94)}
+.section,.content,.page,.page-content,.dashboard,.portal-content{background:transparent!important}
+/* Preserve the more visible image treatment on login */
+.login-page,.login-shell{background-color:#f7f3ed}
