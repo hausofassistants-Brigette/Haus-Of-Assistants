@@ -233,3 +233,46 @@ body{background:#fbfaf8}.app{background:#fbfaf8}.sidebar{width:205px;background:
   .stats{grid-template-columns:1fr}
   .top-title span{display:none}
 }
+
+/* Website-matched portal visual test - 6 Oct 2026 */
+:root{--ink:#171717;--paper:#fff;--beige:#e9e1d5;--beige2:#f5f0e9;--line:#e4ddd4;--muted:#6f6962;--soft:#faf7f2}
+body{background:#f7f3ed;color:var(--ink)}
+.login-wrap{background:linear-gradient(rgba(247,243,237,.90),rgba(247,243,237,.90)),url("ChatGPT%20Image%20Sep%2024,%202026%20at%2005_59_21%20PM.png") center/cover no-repeat}
+.login-card{border-radius:0;box-shadow:0 22px 60px rgba(30,25,20,.10);border:1px solid #ded5ca}
+.login-brand{border-radius:0;background:#f0e8de}
+.login-card h1,.hero-panel h1,.founder-card blockquote{font-family:Inter,Arial,Helvetica,sans-serif;font-weight:800;letter-spacing:-.035em}
+.sidebar{background:#fff;color:var(--ink);border-right:1px solid var(--line)}
+.brand{background:#fff;border-bottom:1px solid var(--line)}.brand-tile{background:#fff!important}.userbox{border-bottom:1px solid var(--line)}.userbox small{color:#777}
+.sidebar nav button,.logout{color:#34312e;border-radius:0}.sidebar nav button:hover,.sidebar nav button.active{background:var(--beige);color:#111}.logout{border-color:var(--line)}
+.topbar{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.topbar h2{font-family:Inter,Arial,sans-serif;font-weight:800;letter-spacing:-.025em}.pill{background:var(--beige)}
+.section{background:#f7f3ed}.hero-panel{background:#eee6dc;color:var(--ink);border-radius:0;box-shadow:none}.hero-panel p{color:#625d57}.hero-art img{filter:none}.hero-art:after{background:linear-gradient(90deg,#eee6dc 0%,rgba(238,230,220,.35) 42%,transparent)}
+.panel,.stat,.client-section,.chat-panel,.client-list,.founder-card,.file-card,.vault-card{border-radius:0!important;box-shadow:0 10px 30px rgba(30,25,20,.035);border-color:var(--line)}
+.primary{transition:transform .22s ease,box-shadow .22s ease}.primary:hover{opacity:1;transform:translateY(-3px);box-shadow:0 12px 26px rgba(23,23,23,.16)}
+.mini,.dashboard-button,.drop,input,select,textarea{border-radius:0!important}.time-box,.notice,.support-card{border-radius:0!important}
+.founder-card img{filter:none}.founder-card blockquote{font-size:19px;line-height:1.2}.eyebrow{color:#746d65}
+@media(hover:hover) and (pointer:fine){.panel,.stat,.client-section,.file-card,.vault-card{transition:transform .22s ease,box-shadow .22s ease}.panel:hover,.stat:hover,.file-card:hover,.vault-card:hover{transform:translateY(-4px);box-shadow:0 15px 34px rgba(30,25,20,.08)}}
+
+/* Soft imagery + consistent edge treatment test */
+body,.app{background:#f7f3ed;position:relative}
+.app:before{content:"";position:fixed;inset:0 0 0 205px;pointer-events:none;z-index:0;background:linear-gradient(rgba(247,243,237,.90),rgba(247,243,237,.90)),url("ChatGPT%20Image%20Sep%2024,%202026%20at%2005_59_21%20PM.png") center/cover fixed no-repeat;opacity:.52}
+.main{position:relative;z-index:1;background:transparent}.section{background:rgba(247,243,237,.80)}
+.topbar{position:sticky}.panel,.stat,.client-section,.chat-panel,.client-list,.founder-card,.file-card,.vault-card,.hero-panel,.time-box,.notice,.support-card,.report-list,.report-list-title,.client-heading,.archive-panel,.login-card,.login-brand,.brand-tile,.primary,.mini,.dashboard-button,.drop,.pill,input,select,textarea{border-radius:0!important}
+.client-section,.panel,.file-card,.vault-card{overflow:hidden}
+@media(max-width:900px){.app:before{inset:0}}
+
+/* Fix test portal content/background clipping */
+html,body{min-height:100%;height:auto!important;overflow-x:hidden;overflow-y:auto!important}
+.app{min-height:100vh;height:auto!important;overflow:visible!important}
+.main{min-height:100vh;height:auto!important;overflow:visible!important;padding-bottom:56px}
+.content,.page,.page-content,.dashboard,.portal-content{height:auto!important;max-height:none!important;overflow:visible!important}
+.app:before{bottom:0;min-height:100vh}
+
+/* Keep muted imagery behind the portal content area, not clipped at content edges */
+.app:before{display:none!important}
+.main{position:relative;isolation:isolate;background:#f7f3ed}
+.main:before{content:"";position:absolute;inset:0;z-index:-2;background:url("ChatGPT%20Image%20Sep%2024,%202026%20at%2005_59_21%20PM.png") center/cover fixed no-repeat}
+.main:after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(247,243,237,.72);pointer-events:none}
+.topbar{background:rgba(255,255,255,.94)}
+.section,.content,.page,.page-content,.dashboard,.portal-content{background:transparent!important}
+/* Preserve the more visible image treatment on login */
+.login-page,.login-shell{background-color:#f7f3ed}
