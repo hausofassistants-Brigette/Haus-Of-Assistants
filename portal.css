@@ -276,3 +276,11 @@ html,body{min-height:100%;height:auto!important;overflow-x:hidden;overflow-y:aut
 .section,.content,.page,.page-content,.dashboard,.portal-content{background:transparent!important}
 /* Preserve the more visible image treatment on login */
 .login-page,.login-shell{background-color:#f7f3ed}
+
+/* Consistent sidebar spacing and icon alignment */
+.sidebar nav{display:flex;flex-direction:column;gap:7px;width:100%;margin-top:14px}
+.sidebar nav button{display:flex;align-items:center;justify-content:flex-start;gap:14px;width:100%;min-height:46px;padding:11px 12px;box-sizing:border-box;white-space:nowrap;font-size:14px;line-height:1.3}
+.sidebar nav button .nav-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 24px;width:24px;min-width:24px;font-size:18px;line-height:1}
+.sidebar nav button .nav-label{display:inline-block;min-width:0;flex:1;text-align:left}
+.app.sidebar-collapsed .sidebar nav button{justify-content:center;padding-left:6px;padding-right:6px}
+.app.sidebar-collapsed .sidebar nav button .nav-icon{flex:0 0 24px;width:24px}
