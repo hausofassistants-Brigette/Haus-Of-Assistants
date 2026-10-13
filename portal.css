@@ -307,3 +307,8 @@ html,body{min-height:100%;height:auto!important;overflow-x:hidden;overflow-y:aut
 .private-note-card textarea{background:#fff;border:1px solid var(--line);height:150px;min-height:150px;max-height:150px}
 .private-note-actions{margin-top:12px}
 @media(max-width:600px){.private-note-card .private-note-head{padding:14px 16px}.private-note-body{padding:14px 16px}.private-note-label{align-items:flex-start;flex-direction:column;gap:4px}}
+
+/* Larger private note editing areas: show more content without scrolling */
+.private-notes-list{max-height:none;overflow-y:visible}
+.private-note-card textarea{height:340px;min-height:340px;max-height:none;resize:vertical;overflow-y:auto}
+@media(max-width:600px){.private-notes-list{max-height:none}.private-note-card textarea{height:280px;min-height:280px;max-height:none}}
