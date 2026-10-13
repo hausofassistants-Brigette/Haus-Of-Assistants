@@ -284,3 +284,13 @@ html,body{min-height:100%;height:auto!important;overflow-x:hidden;overflow-y:aut
 .sidebar nav button .nav-label{display:inline-block;min-width:0;flex:1;text-align:left}
 .app.sidebar-collapsed .sidebar nav button{justify-content:center;padding-left:6px;padding-right:6px}
 .app.sidebar-collapsed .sidebar nav button .nav-icon{flex:0 0 24px;width:24px}
+
+/* Private notes: compact, stacked client notepads with independent scrolling */
+.private-notes-list{display:flex;flex-direction:column;gap:16px;max-height:70vh;overflow-y:auto;padding:2px 8px 14px 2px;overscroll-behavior:contain}
+.private-note-card{padding:20px 22px!important;flex-shrink:0}
+.private-note-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:12px}
+.private-note-head h3{margin:0 0 4px;font-size:18px}
+.private-note-head [data-note-status]{text-align:right}
+.private-note-card textarea{display:block;width:100%;height:145px;min-height:145px;max-height:145px;overflow-y:auto;resize:none;padding:12px 14px;border:1px solid var(--line);font:inherit;line-height:1.55;background:#fff}
+.private-note-actions{display:flex;justify-content:flex-end;margin-top:10px}
+@media(max-width:600px){.private-notes-list{max-height:75vh}.private-note-card{padding:14px!important}.private-note-head{flex-direction:column;gap:5px}.private-note-head [data-note-status]{text-align:left}}
