@@ -294,3 +294,16 @@ html,body{min-height:100%;height:auto!important;overflow-x:hidden;overflow-y:aut
 .private-note-card textarea{display:block;width:100%;height:145px;min-height:145px;max-height:145px;overflow-y:auto;resize:none;padding:12px 14px;border:1px solid var(--line);font:inherit;line-height:1.55;background:#fff}
 .private-note-actions{display:flex;justify-content:flex-end;margin-top:10px}
 @media(max-width:600px){.private-notes-list{max-height:75vh}.private-note-card{padding:14px!important}.private-note-head{flex-direction:column;gap:5px}.private-note-head [data-note-status]{text-align:left}}
+
+/* Private Notes uses the same client-group cards as invoices and tasks */
+.private-notes-list{gap:18px;padding-right:8px}
+.private-note-card.client-section{padding:0!important;min-height:0;background:#fff;border:1px solid var(--line);overflow:hidden}
+.private-note-card .private-note-head{background:var(--beige);padding:18px 24px;margin:0;border-bottom:1px solid var(--line);align-items:center}
+.private-note-card .private-note-head h3{font-family:Georgia,'Times New Roman',serif;font-size:21px;font-weight:600;line-height:1.2;margin:0 0 4px}
+.private-note-card .private-note-head .muted{font-size:13px}
+.private-note-body{padding:20px 24px 22px;background:#fff}
+.private-note-label{display:flex;justify-content:space-between;gap:12px;align-items:center;font-weight:700;font-size:15px;margin-bottom:12px}
+.private-note-label [data-note-status]{font-weight:400}
+.private-note-card textarea{background:#fff;border:1px solid var(--line);height:150px;min-height:150px;max-height:150px}
+.private-note-actions{margin-top:12px}
+@media(max-width:600px){.private-note-card .private-note-head{padding:14px 16px}.private-note-body{padding:14px 16px}.private-note-label{align-items:flex-start;flex-direction:column;gap:4px}}
