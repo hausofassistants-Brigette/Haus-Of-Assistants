@@ -78,6 +78,21 @@
 .hero h1{font-size:clamp(42px,5vw,62px);max-width:590px}
 .hero:after{width:42%}
 }
+
+/* Liquid Glass website preview: visual-only layer */
+body{background:#f7f2eb}
+.nav{background:rgba(251,247,241,.72)!important;backdrop-filter:blur(24px) saturate(145%);-webkit-backdrop-filter:blur(24px) saturate(145%);border-bottom:1px solid rgba(255,255,255,.7)}
+.services,.why,.intro,.image-strip,.legal{background:linear-gradient(135deg,#f4eade,#faf7f1)!important}
+.card,.whyitem,.step,.image-slot,.aboutbox,.editorial-copy,.tag,.faq details{border-radius:22px!important}
+.card,.whyitem,.step,.image-slot,.tag{background:linear-gradient(145deg,rgba(255,255,255,.81),rgba(255,250,242,.59))!important;border:1px solid rgba(255,255,255,.86)!important;box-shadow:0 14px 36px rgba(84,63,40,.085),inset 0 1px rgba(255,255,255,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.featured{background:linear-gradient(140deg,rgba(83,69,56,.94),rgba(120,101,80,.89))!important;color:white!important}
+.featured p,.featured .hours{color:#f4eee7!important}
+.btn,.popular,.contact input,.contact textarea,.contact select{border-radius:13px}
+.btn{transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(66,49,30,.16)}
+.contact{background:linear-gradient(130deg,#302a25,#625244)!important}
+.contact input,.contact textarea,.contact select{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.3)!important}
+@media(max-width:900px){.card,.whyitem,.step,.image-slot{border-radius:17px!important}}
+
 </style><style>
 footer .footerlinks a{text-decoration:none!important}
 footer .footerlinks a:hover{text-decoration:none!important}
