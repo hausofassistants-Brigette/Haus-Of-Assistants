@@ -333,3 +333,19 @@ html,body{min-height:100%;height:auto!important;overflow-x:hidden;overflow-y:aut
 .notes-editor-content textarea{width:100%;flex:1;min-height:420px;height:52vh;max-height:none;resize:vertical;padding:20px 22px;border:1px solid var(--line);background:#fff;font:inherit;font-size:15px;line-height:1.75}
 .notes-editor-content .private-note-actions{margin-top:18px}
 @media(max-width:700px){.notes-workspace{grid-template-columns:1fr;min-height:0}.notes-client-sidebar{border-right:0;border-bottom:1px solid var(--line)}.notes-client-nav{flex-direction:row;overflow-x:auto;padding:0 12px 12px}.notes-client-tab{min-width:150px;width:auto;flex:0 0 auto}.notes-sidebar-title{padding:14px 16px 10px}.notes-editor-heading{padding:20px}.notes-editor-heading h2{font-size:24px}.notes-editor-content{padding:18px}.notes-editor-content textarea{height:55vh;min-height:350px}}
+
+
+/* Liquid Glass visual preview: styling only, no functional changes */
+:root{--paper:#fbf8f3;--beige:#e9dfd1;--beige2:#f6eee4;--line:rgba(145,119,91,.21);--soft:#f9f4ec}
+body{background:radial-gradient(ellipse at 88% 5%,rgba(233,208,178,.52),transparent 40%),radial-gradient(ellipse at 6% 80%,rgba(224,213,197,.55),transparent 48%),#f7f3ed;background-attachment:fixed}
+.sidebar{background:linear-gradient(155deg,rgba(255,255,255,.72),rgba(238,226,210,.56))!important;backdrop-filter:blur(24px) saturate(145%);-webkit-backdrop-filter:blur(24px) saturate(145%);border-right:1px solid rgba(255,255,255,.65);box-shadow:8px 0 32px rgba(78,57,33,.055)}
+.topbar{background:rgba(255,255,255,.56)!important;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.7)}
+.stat,.panel,.client-section,.hero-panel,.login-card,.notes-workspace,.private-note-card{background:linear-gradient(145deg,rgba(255,255,255,.77),rgba(255,250,243,.56))!important;backdrop-filter:blur(16px) saturate(135%);-webkit-backdrop-filter:blur(16px) saturate(135%);border:1px solid rgba(255,255,255,.85)!important;border-radius:22px!important;box-shadow:0 12px 36px rgba(83,63,40,.085),inset 0 1px rgba(255,255,255,.95)}
+.list-item,.client-select,.archive-panel,.chat-panel,.form-panel,.task-board{border-radius:16px}
+.sidebar nav button,.logout,.primary,.mini,.pill,.badge{border-radius:13px;transition:background .2s ease,box-shadow .2s ease,transform .2s ease}
+.sidebar nav button:hover,.primary:hover,.mini:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(90,68,45,.09)}
+.sidebar nav button.active{background:rgba(255,255,255,.68)!important;box-shadow:inset 0 1px rgba(255,255,255,.9),0 5px 18px rgba(76,57,35,.07)}
+input,select,textarea{border-radius:12px}
+.notes-client-sidebar{background:rgba(239,230,217,.7)}
+.notes-editor-pane,.notes-editor-heading,.private-note-body{background:rgba(255,255,255,.64)}
+@media(max-width:700px){.stat,.panel,.client-section,.hero-panel,.login-card,.notes-workspace{border-radius:17px!important}.sidebar{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}}
