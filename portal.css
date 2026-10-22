@@ -352,7 +352,7 @@ input,select,textarea{border-radius:12px}
 
 
 /* Matching Liquid Glass login screen */
-.login-wrap{background:radial-gradient(circle at 18% 24%,rgba(221,199,168,.65),transparent 38%),radial-gradient(circle at 85% 80%,rgba(232,214,189,.75),transparent 42%),linear-gradient(145deg,#f9f4ec,#eee5d8)!important}
+.login-wrap{background:linear-gradient(rgba(247,243,237,.60),rgba(247,243,237,.67)),url("ChatGPT%20Image%20Sep%2024,%202026%20at%2005_59_21%20PM.png") center/cover no-repeat fixed!important}
 .login-card{background:linear-gradient(140deg,rgba(255,255,255,.79),rgba(255,250,243,.58))!important;backdrop-filter:blur(26px) saturate(145%);-webkit-backdrop-filter:blur(26px) saturate(145%);border:1px solid rgba(255,255,255,.9)!important;border-radius:28px!important;box-shadow:0 24px 75px rgba(89,67,41,.13),inset 0 1px rgba(255,255,255,.95)!important}
 .login-card input{background:rgba(255,255,255,.72);border:1px solid rgba(145,119,91,.22);border-radius:13px}
 .login-card .primary{border-radius:14px}
