@@ -3,7 +3,7 @@ const BASE = "https://qitbfjlsebdkejsnzcap.supabase.co";
 const FROM = "Haus of Assistants <notifications@hausofassistants.com.au>";
 const HEAD = () => ({apikey:process.env.SUPABASE_SERVICE_ROLE_KEY,Authorization:"Bearer "+process.env.SUPABASE_SERVICE_ROLE_KEY});
 async function db(path,options={}) {const r=await fetch(BASE+"/rest/v1/"+path,{...options,headers:{...HEAD(),...(options.headers||{})}});if(!r.ok)throw Error("Database request failed ("+r.status+")");return r.status===204?null:r.json();}
-async function deliver(invoiceId,kind) {
+export async function deliver(invoiceId,kind) {
  const rows=await db("invoices?id=eq."+encodeURIComponent(invoiceId)+"&select=id,client_id,invoice_number,amount,due_date,status,pdf_path,pdf_url");
  const inv=rows?.[0];if(!inv)throw Error("Invoice not found");
  if(inv.status==="Paid"||inv.status==="Draft")throw Error("This invoice cannot be emailed");
