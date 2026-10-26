@@ -374,3 +374,20 @@ input,select,textarea{border-radius:12px}
 .sidebar nav button.admin-only,.sidebar nav button#notes-nav,.sidebar nav button[data-section="email-history"]{display:flex;align-items:center;justify-content:flex-start;min-height:40px!important;padding:8px 11px!important;gap:12px!important;margin:0!important;width:100%;box-sizing:border-box}
 .sidebar nav button.admin-only .nav-icon,.sidebar nav button#notes-nav .nav-icon,.sidebar nav button[data-section="email-history"] .nav-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 22px!important;width:22px!important;min-width:22px!important}
 @media(max-height:760px){.sidebar nav button.admin-only,.sidebar nav button#notes-nav,.sidebar nav button[data-section="email-history"]{min-height:36px!important;padding:6px 10px!important}}
+
+
+/* Email History: readable, high-contrast records over decorative background */
+#section-email-history .filters{max-width:1100px;margin:0 auto 18px}
+#section-email-history #email-history-search{background:#fff!important;border:1px solid #d7cdc1!important;color:#282522!important;box-shadow:0 3px 12px rgba(65,49,30,.07);min-height:45px}
+#email-history-content{max-width:1100px;margin:0 auto;background:rgba(255,255,255,.96)!important;border:1px solid #e7ddd2;border-radius:18px;padding:18px 20px;box-shadow:0 12px 30px rgba(58,42,26,.1);color:#27231f!important}
+#email-history-content .table-wrap{overflow-x:auto;background:#fff;border-radius:12px}
+#email-history-content table{width:100%;border-collapse:collapse;background:#fff!important;color:#28231e!important;font-size:14px}
+#email-history-content th{background:#f3ece3!important;color:#4c4036!important;text-transform:uppercase;letter-spacing:.04em;font-size:11px;font-weight:800;text-align:left;padding:15px 14px;border-bottom:1px solid #ddd1c3}
+#email-history-content td{padding:17px 14px!important;background:#fff!important;color:#2b2723!important;border-bottom:1px solid #e9e1d8;line-height:1.45;vertical-align:middle}
+#email-history-content tr:nth-child(even) td{background:#faf7f3!important}
+#email-history-content tbody tr:hover td{background:#f2e9df!important}
+#email-history-content td:nth-child(2){font-weight:600;overflow-wrap:anywhere}
+#email-history-content td:nth-child(3){font-weight:600}
+#email-history-content .badge{display:inline-block;background:#e6f4e9!important;color:#21663b!important;border:1px solid #b9ddc3;border-radius:999px;padding:5px 10px;font-size:11px;font-weight:800}
+#email-history-content .muted{color:#665c51!important;margin:14px 4px 2px;font-size:12px}
+@media(max-width:700px){#email-history-content{padding:10px}#email-history-content table{min-width:680px}}
