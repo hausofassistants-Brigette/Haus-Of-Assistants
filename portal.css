@@ -368,3 +368,9 @@ input,select,textarea{border-radius:12px}
 .sidebar .logout{flex-shrink:0;margin-top:8px}
 .app.sidebar-collapsed .sidebar .nav-divider{margin:8px 3px;width:calc(100% - 6px)}
 @media(max-height:760px){.sidebar nav{gap:1px!important;margin-top:6px!important}.sidebar nav button{min-height:36px!important;padding:6px 10px!important}.sidebar .nav-divider{margin:5px 10px}}
+
+
+/* Uniform spacing for admin navigation, including Notes and Email History */
+.sidebar nav button.admin-only,.sidebar nav button#notes-nav,.sidebar nav button[data-section="email-history"]{display:flex;align-items:center;justify-content:flex-start;min-height:40px!important;padding:8px 11px!important;gap:12px!important;margin:0!important;width:100%;box-sizing:border-box}
+.sidebar nav button.admin-only .nav-icon,.sidebar nav button#notes-nav .nav-icon,.sidebar nav button[data-section="email-history"] .nav-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 22px!important;width:22px!important;min-width:22px!important}
+@media(max-height:760px){.sidebar nav button.admin-only,.sidebar nav button#notes-nav,.sidebar nav button[data-section="email-history"]{min-height:36px!important;padding:6px 10px!important}}
