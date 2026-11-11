@@ -18,7 +18,9 @@ export default async function handler(req,res){
   const invoices=await db("invoices?id=eq."+encodeURIComponent(id)+"&select=id,client_id,invoice_number,amount,amount_paid,due_date,status,pdf_path");
   const inv=invoices?.[0];if(!inv)return res.status(404).json({error:"Invoice not found"});
   if(inv.status==="Draft")return res.status(400).json({error:"Draft invoices cannot be emailed"});
-  const kind=inv.status==="Paid"?"paid":inv.status==="Overdue"?"overdue":inv.status==="Partially Paid"?"partial":"initial";
+  if(req.body?.kind!=="resend")return res.status(400).json({error:"Only manual invoice resends are supported here"});
+  if(inv.status==="Paid")return res.status(400).json({error:"Paid invoices cannot be resent"});
+  const kind="resend";
   const profiles=await db("profiles?id=eq."+encodeURIComponent(inv.client_id)+"&select=email,full_name");
   const person=profiles?.[0];if(!person?.email)return res.status(400).json({error:"Client email is missing"});
   const name=String(person.full_name||"").trim().split(/\s+/)[0]||"there";
