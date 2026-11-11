@@ -5,7 +5,8 @@ export default async function handler(req,res){
  const secret=process.env.CRON_SECRET;
  if(!secret||req.headers.authorization!=="Bearer "+secret)return res.status(401).json({error:"Unauthorized"});
  if(!process.env.SUPABASE_SERVICE_ROLE_KEY||!process.env.RESEND_API_KEY)return res.status(503).json({error:"Email service not configured"});
- const today=new Intl.DateTimeFormat("en-CA",{timeZone:"Australia/Brisbane",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+ const parts=Object.fromEntries(new Intl.DateTimeFormat("en-GB",{timeZone:"Australia/Brisbane",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date()).filter(p=>p.type!=="literal").map(p=>[p.type,p.value]));
+ const today=`${parts.year}-${parts.month}-${parts.day}`;
  const [y,m,d]=today.split("-").map(Number);
  const yesterday=new Date(Date.UTC(y,m-1,d-1)).toISOString().slice(0,10);
  try{
